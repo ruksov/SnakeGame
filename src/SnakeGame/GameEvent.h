@@ -7,7 +7,8 @@ namespace sg
         LoadMainMenu,
         LoadDifficultyMenu,
         LoadGameLevel,
-        LoadGameOverMenu
+        LoadGameOverMenu,
+        Exit
     };
 
     using OnGameEventCb = std::function<void(GameEvent)>;

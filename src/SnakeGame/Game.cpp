@@ -33,7 +33,6 @@ namespace sg
             //
             if (Input::Esc == input)
             {
-                std::cout << "Please, press some key to exit from a game . . . \n";
                 m_state.SetExitState();
                 continue;
             }
@@ -54,6 +53,9 @@ namespace sg
             //
             std::this_thread::sleep_until(startFrameTime + msPerFrame);
         }
+
+        ClearConsole();
+        std::cout << "Please, press some key to exit from a game . . . \n";
     }
 
     void Game::OnGameEvent(GameEvent ev)
@@ -74,6 +76,10 @@ namespace sg
 
         case GameEvent::LoadGameOverMenu:
             m_nextLevel = m_levelLoader->LoadLevel(LevelType::GameOverMenu, m_state);
+            break;
+
+        case GameEvent::Exit:
+            m_state.SetExitState();
             break;
 
         default:

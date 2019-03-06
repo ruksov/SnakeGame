@@ -168,8 +168,10 @@
     <ClCompile Include="GameLauncher.cpp" />
     <ClCompile Include="GameState.cpp" />
     <ClCompile Include="InputQueue.cpp" />
+    <ClCompile Include="ItemList.cpp" />
     <ClCompile Include="LevelLoader.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="MainMenuLevel.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Exceptions.h" />
@@ -181,7 +183,9 @@
     <ClInclude Include="ILevelLoader.h" />
     <ClInclude Include="Input.h" />
     <ClInclude Include="InputQueue.h" />
+    <ClInclude Include="ItemList.h" />
     <ClInclude Include="LevelLoader.h" />
+    <ClInclude Include="MainMenuLevel.h" />
     <ClInclude Include="stdafx.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

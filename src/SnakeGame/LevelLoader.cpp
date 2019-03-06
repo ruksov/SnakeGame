@@ -2,6 +2,8 @@
 #include "LevelLoader.h"
 #include "Exceptions.h"
 
+#include "MainMenuLevel.h"
+
 namespace sg
 {
     LevelPtr LevelLoader::LoadLevel(LevelType type, GameState & gameState)
@@ -10,6 +12,7 @@ namespace sg
         switch (type)
         {
         case LevelType::MainMenu:
+            level = std::make_unique<MainMenuLevel>(gameState);
             break;
         case LevelType::DifficultyMenu:
             break;
