@@ -1,7 +1,8 @@
 #include "stdafx.h"
+#include "GameLauncher.h"
 
 int main()
 {
-    std::cout << "Hello Snake Game!!!\n";
+    sg::LaunchGame();
     return 0;
 }

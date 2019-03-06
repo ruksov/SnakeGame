@@ -13,7 +13,7 @@ namespace sg
         GameOverMenu
     };
 
-    using LevelPtr = std::unique_ptr<ILevel>;
+    using LevelLoaderPtr = std::unique_ptr<struct ILevelLoader>;
 
     //
     // Interface for loading levels.

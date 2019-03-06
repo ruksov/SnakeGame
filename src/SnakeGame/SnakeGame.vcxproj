@@ -164,6 +164,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Game.cpp" />
+    <ClCompile Include="GameLauncher.cpp" />
     <ClCompile Include="GameState.cpp" />
     <ClCompile Include="InputQueue.cpp" />
     <ClCompile Include="LevelLoader.cpp" />
@@ -171,6 +173,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Exceptions.h" />
+    <ClInclude Include="Game.h" />
+    <ClInclude Include="GameEvent.h" />
+    <ClInclude Include="GameLauncher.h" />
     <ClInclude Include="GameState.h" />
     <ClInclude Include="ILevel.h" />
     <ClInclude Include="ILevelLoader.h" />

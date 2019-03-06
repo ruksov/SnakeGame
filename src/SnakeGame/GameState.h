@@ -1,4 +1,5 @@
 #pragma once
+#include "GameEvent.h"
 
 namespace sg
 {
@@ -24,7 +25,7 @@ namespace sg
     class GameState
     {
     public:
-        explicit GameState(size_t framesPerSecond);
+        GameState(size_t framesPerSecond, OnGameEventCb onGameEventCb);
         
         size_t GetFps() const;
 
@@ -39,12 +40,21 @@ namespace sg
         void SetDifficulty(Difficulty difficulty);
         Difficulty GetDifficulty() const;
 
+        //
+        // This method will be notify game state subscriber.
+        // Now it is main Game class. And levels will send
+        // via this method signal to Game class about loading
+        // some new level.
+        //
+        void Notify(GameEvent ev);
+
     private:
         size_t m_fps = 0;
         bool m_exitState = false;
         size_t m_lastScore = 0;
         size_t m_highScore = 0;
         Difficulty m_difficulty = Difficulty::Undefined;
+        OnGameEventCb m_onGameEventCb;
     };
 }
 

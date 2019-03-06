@@ -1,11 +1,14 @@
 #include "stdafx.h"
 #include "GameState.h"
+#include "Exceptions.h"
 
 namespace sg
 {
-    GameState::GameState(size_t framesPerSecond)
+    GameState::GameState(size_t framesPerSecond, OnGameEventCb onGameEventCb)
         : m_fps(framesPerSecond)
+        , m_onGameEventCb(onGameEventCb)
     {
+        THROW_IF(!m_onGameEventCb, "Failed to create game state class: On game event callback can't be NULL");
     }
 
     size_t GameState::GetFps() const
@@ -50,5 +53,10 @@ namespace sg
     Difficulty GameState::GetDifficulty() const
     {
         return m_difficulty;
+    }
+
+    void GameState::Notify(GameEvent ev)
+    {
+        m_onGameEventCb(ev);
     }
 }
