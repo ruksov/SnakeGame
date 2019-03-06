@@ -15,8 +15,10 @@ namespace sg
 
         if (m_handleInputThread.valid())
         {
+            //
             // If in handle input thread was called _getch and user did not
-            // press some key, we will wait until user press some key.
+            // press some key, dtor will wait until user press some key.
+            //
             m_handleInputThread.get();
         }
     }
@@ -65,6 +67,9 @@ namespace sg
             }
             break;
 
+            //
+            // Just ignore all other values from _getch().
+            //
             case Input::Undefined:
             default:
                 continue;

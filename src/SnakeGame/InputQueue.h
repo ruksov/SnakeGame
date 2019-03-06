@@ -3,27 +3,20 @@
 
 namespace sg
 {
+    //
+    // This class collects user input to a queue.
+    //
+    // To get user input just use Pop() method. If there were not
+    // any user input Pop() method returns Input::Undefined value.
+    //
     class InputQueue
     {
     public:
         InputQueue();
         ~InputQueue();
 
-        //
-        // Try pop charachter from input.
-        // If user press some key, this method will return char value
-        // and delete it from queue. Otherwise it will return std::nullopt.
-        //
         Input Pop();
-
-        //
-        // Clear input queue.
-        //
         void Clear();
-
-        //
-        // Stops working thread, which handle input.
-        //
         void Stop();
 
     private:
