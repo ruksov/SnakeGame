@@ -166,13 +166,17 @@
   <ItemGroup>
     <ClCompile Include="GameState.cpp" />
     <ClCompile Include="InputQueue.cpp" />
+    <ClCompile Include="LevelLoader.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Exceptions.h" />
     <ClInclude Include="GameState.h" />
+    <ClInclude Include="ILevel.h" />
+    <ClInclude Include="ILevelLoader.h" />
     <ClInclude Include="Input.h" />
     <ClInclude Include="InputQueue.h" />
+    <ClInclude Include="LevelLoader.h" />
     <ClInclude Include="stdafx.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
