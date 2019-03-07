@@ -59,7 +59,7 @@ namespace sg
             // Game over. Save score and send event to load game over level.
             //
             m_gameState.SetLastScore(m_score);
-            m_gameState.Notify(GameEvent::LoadMainMenu);
+            m_gameState.Notify(GameEvent::LoadGameOverMenu);
             break;
 
         default:
@@ -105,8 +105,8 @@ namespace sg
         Point startPoint = GetRandomEmptyPos();
         const Point centerPoint(m_board.GetWidth() / 2, m_board.GetHeight() / 2);
 
-        int xDelta = startPoint.X - centerPoint.X;
-        int yDelta = startPoint.Y - centerPoint.Y;
+        int xDelta = static_cast<int>(startPoint.X - centerPoint.X);
+        int yDelta = static_cast<int>(startPoint.Y - centerPoint.Y);
 
         //
         // Set direction to move from the nearest wall.

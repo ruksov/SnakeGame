@@ -168,6 +168,7 @@
     <ClCompile Include="DifficultyMenuLevel.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="GameLauncher.cpp" />
+    <ClCompile Include="GameOverMenuLevel.cpp" />
     <ClCompile Include="GameState.cpp" />
     <ClCompile Include="InputQueue.cpp" />
     <ClCompile Include="ItemList.cpp" />
@@ -185,6 +186,7 @@
     <ClInclude Include="Game.h" />
     <ClInclude Include="GameEvent.h" />
     <ClInclude Include="GameLauncher.h" />
+    <ClInclude Include="GameOverMenuLevel.h" />
     <ClInclude Include="GameState.h" />
     <ClInclude Include="ILevel.h" />
     <ClInclude Include="ILevelLoader.h" />
