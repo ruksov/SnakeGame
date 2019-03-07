@@ -38,7 +38,7 @@ namespace sg
             << "snake controls:\n"
             << "\t w, a, s, d - change snake direction \n"
             << '\n'
-            << " * press Esc to quit from game in any moment \n"
+            << " * press Esc to quit from the game at any moment \n"
             << '\n'
             << '\n'
             << "Created by Yegor Krasochenko (squanchy) \n";

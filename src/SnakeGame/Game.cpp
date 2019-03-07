@@ -55,7 +55,7 @@ namespace sg
         }
 
         ClearConsole();
-        std::cout << "Please, press some key to exit from a game . . . \n";
+        std::cout << "Please, press some key to exit from the game . . . \n";
     }
 
     void Game::OnGameEvent(GameEvent ev)
