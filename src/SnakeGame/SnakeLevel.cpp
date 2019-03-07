@@ -40,7 +40,7 @@ namespace sg
     {
         std::cout << m_board.FormatBoard()
             << "\n score: " << m_score
-            << "\n high score: " << m_gameState.GetHighScore();
+            << "\n high score: " << m_gameState.GetHighScore() << '\n';
     }
 
     void SnakeLevel::OnSnakeAction(SnakeAction snakeAction)

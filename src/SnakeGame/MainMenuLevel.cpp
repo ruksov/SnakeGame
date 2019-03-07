@@ -25,17 +25,23 @@ namespace sg
 
     void MainMenuLevel::Draw()
     {
-        std::cout << "Main menu: \n"
-            << m_items.FormatItemList() << '\n'
+        std::cout << "Main Menu: \n"
+            << m_items.FormatItemList() 
+            << '\n'
             << "last score: " << m_gameState.GetLastScore() << '\n'
-            << "high score: " << m_gameState.GetHighScore() << '\n'
-            << "\nSnake controls:\n"
-            << "w, a, s, d - change snake direction\n"
-            << "\nMenu controls:\n"
-            << "w, a - move item mark\n"
-            << "Enter - choose marked item\n"
-            << "\n * press Esc to quit from game in any moment"
-            << "\n\nCreated by Yegor Krasochenko (squanchy)";
+            << "high score: " << m_gameState.GetHighScore() << "\n"
+            << '\n'
+            << "menu controls:\n"
+            << "\t w, a - move item mark\n" 
+            << "\t Enter - choose marked item \n"
+            << '\n'
+            << "snake controls:\n"
+            << "\t w, a, s, d - change snake direction \n"
+            << '\n'
+            << " * press Esc to quit from game in any moment \n"
+            << '\n'
+            << '\n'
+            << "Created by Yegor Krasochenko (squanchy) \n";
     }
 
     void MainMenuLevel::HandleInput(Input input)

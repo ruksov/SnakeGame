@@ -12,7 +12,7 @@ namespace sg
     };
 
     GameOverMenuLevel::GameOverMenuLevel(GameState & gameState)
-        : m_items({ "Restart", "Go to Main menu", "Exit" })
+        : m_items({ "Restart", "Go to Main Menu", "Exit" })
         , m_gameState(gameState)
     {
     }
@@ -25,9 +25,11 @@ namespace sg
 
     void GameOverMenuLevel::Draw()
     {
-        std::cout << "Game over \n"
-            << "Your score: " << m_gameState.GetLastScore() << '\n'
-            << "High score: " << m_gameState.GetHighScore() << "\n\n"
+        std::cout << "Game Over \n"
+            << '\n'
+            << "your score: " << m_gameState.GetLastScore() << '\n'
+            << "high score: " << m_gameState.GetHighScore() << "\n"
+            << '\n'
             << "What you want to do next? \n"
             << m_items.FormatItemList();
     }
