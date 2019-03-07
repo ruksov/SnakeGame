@@ -165,6 +165,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Board.cpp" />
+    <ClCompile Include="DifficultyMenuLevel.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="GameLauncher.cpp" />
     <ClCompile Include="GameState.cpp" />
@@ -179,6 +180,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Board.h" />
+    <ClInclude Include="DifficultyMenuLevel.h" />
     <ClInclude Include="Exceptions.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="GameEvent.h" />

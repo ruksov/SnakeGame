@@ -3,6 +3,7 @@
 #include "Exceptions.h"
 
 #include "MainMenuLevel.h"
+#include "DifficultyMenuLevel.h"
 #include "SnakeLevel.h"
 
 namespace sg
@@ -16,6 +17,7 @@ namespace sg
             level = std::make_unique<MainMenuLevel>(gameState);
             break;
         case LevelType::DifficultyMenu:
+            level = std::make_unique<DifficultyMenuLevel>(gameState);
             break;
         case LevelType::SnakeGame:
             level = std::make_unique<SnakeLevel>(gameState);
