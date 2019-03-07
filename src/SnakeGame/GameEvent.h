@@ -6,7 +6,7 @@ namespace sg
     {
         LoadMainMenu,
         LoadDifficultyMenu,
-        LoadGameLevel,
+        LoadSnakeLevel,
         LoadGameOverMenu,
         Exit
     };

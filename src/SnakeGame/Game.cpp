@@ -70,8 +70,8 @@ namespace sg
             m_nextLevel = m_levelLoader->LoadLevel(LevelType::DifficultyMenu, m_state);
             break;
 
-        case GameEvent::LoadGameLevel:
-            m_nextLevel = m_levelLoader->LoadLevel(LevelType::Game, m_state);
+        case GameEvent::LoadSnakeLevel:
+            m_nextLevel = m_levelLoader->LoadLevel(LevelType::SnakeGame, m_state);
             break;
 
         case GameEvent::LoadGameOverMenu:

@@ -9,7 +9,7 @@ namespace sg
         Undefined = 0,
         MainMenu,
         DifficultyMenu,
-        Game,
+        SnakeGame,
         GameOverMenu
     };
 

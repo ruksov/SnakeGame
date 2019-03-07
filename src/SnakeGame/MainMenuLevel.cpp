@@ -46,7 +46,9 @@ namespace sg
             switch (item)
             {
             case MainMenuItems::NewGame:
-                m_gameState.Notify(GameEvent::LoadDifficultyMenu);
+                //TODO: remove default difficulty
+                m_gameState.SetDifficulty(Difficulty::Normal);
+                m_gameState.Notify(GameEvent::LoadSnakeLevel);
                 break;
 
             case MainMenuItems::Exit:

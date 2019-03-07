@@ -173,6 +173,9 @@
     <ClCompile Include="LevelLoader.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MainMenuLevel.cpp" />
+    <ClCompile Include="Snake.cpp" />
+    <ClCompile Include="SnakeController.cpp" />
+    <ClCompile Include="SnakeLevel.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Board.h" />
@@ -189,6 +192,9 @@
     <ClInclude Include="LevelLoader.h" />
     <ClInclude Include="MainMenuLevel.h" />
     <ClInclude Include="Point.h" />
+    <ClInclude Include="Snake.h" />
+    <ClInclude Include="SnakeController.h" />
+    <ClInclude Include="SnakeLevel.h" />
     <ClInclude Include="stdafx.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
