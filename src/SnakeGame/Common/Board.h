@@ -3,21 +3,13 @@
 
 namespace sg
 {
-    enum class ElementType
-    {
-        Empty,
-        Wall,
-        Fruit,
-        Snake
-    };
-
     class Board
     {
     public:
         Board(size_t width, size_t height);
 
-        void SetElement(ElementType value, Point pos);
-        ElementType GetElement(Point pos) const;
+        void SetElement(char value, Point pos);
+        char GetElement(Point pos) const;
 
         std::string FormatBoard() const;
 
@@ -25,7 +17,7 @@ namespace sg
         size_t GetHeight() const;
 
     private:
-        std::vector<std::vector<ElementType>> m_board;
+        std::vector<std::vector<char>> m_board;
     };
 }
 

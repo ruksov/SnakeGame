@@ -7,6 +7,9 @@ namespace sg
 {
     using SnakePtr = std::unique_ptr<Snake>;
 
+    //
+    // This class handles input and controls Snake speed and direction.
+    //
     class SnakeController
     {
     public:

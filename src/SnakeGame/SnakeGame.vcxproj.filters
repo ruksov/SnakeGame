@@ -115,5 +115,8 @@
       <Filter>Levels</Filter>
     </ClInclude>
     <ClInclude Include="stdafx.h" />
+    <ClInclude Include="Levels\SnakeLevel\MapElement.h">
+      <Filter>Levels\SnakeLevel</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

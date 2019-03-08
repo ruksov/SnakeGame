@@ -9,7 +9,8 @@ using namespace std::chrono_literals;
 namespace sg
 {
     Game::Game(LevelLoaderPtr levelLoader)
-        : m_state(10, [this](auto ev) { OnGameEvent(ev); })
+        : m_fps(10)
+        , m_state(m_fps, [this](auto ev) { OnGameEvent(ev); })
         , m_levelLoader(std::move(levelLoader))
     {
         THROW_IF(!m_levelLoader, "Failed to create game: Level loader can't be NULL");
@@ -18,8 +19,10 @@ namespace sg
     void Game::Launch()
     {
         InputQueue inputs;
-        const auto msPerFrame = 1000ms / m_state.GetFps();
+        const auto msPerFrame = 1000ms / m_fps;
         LevelPtr level = m_levelLoader->LoadLevel(LevelType::MainMenu, m_state);
+
+        THROW_IF(!level, "Failed to launch game: Start level can't be NULL");
 
         while (!m_state.GetExitState())
         {
@@ -38,14 +41,23 @@ namespace sg
                 continue;
             }
 
-            if (level)
-            {
-                level->Update(input);
-                level->Draw();
-            }
+            //
+            // In Update method the level does it's logic and updates the state of
+            // it's inner objects.
+            //
+            level->Update(input);
+            
+            //
+            // The level's Draw method uses std::cout to draw it's current state.
+            //
+            level->Draw();
 
             if (m_nextLevel)
             {
+                //
+                // The game must to switch current level, because
+                // it gets some event with asking to load next level.
+                //
                 level = std::move(m_nextLevel);
             }
 
@@ -56,6 +68,10 @@ namespace sg
         }
 
         ClearConsole();
+
+        //
+        // To determine why the game must ask this, read the comments in InputQueue dtor.
+        //
         std::cout << "Please, press some key to exit from the game . . . \n";
     }
 

@@ -8,16 +8,16 @@ namespace sg
     {
         for (auto& row : m_board)
         {
-            row.resize(width);
+            row.resize(width, ' ');
         }
     }
 
-    void Board::SetElement(ElementType value, Point pos)
+    void Board::SetElement(char value, Point pos)
     {
         m_board.at(pos.Y).at(pos.X) = value;
     }
 
-    ElementType Board::GetElement(Point pos) const
+    char Board::GetElement(Point pos) const
     {
         return m_board.at(pos.Y).at(pos.X);
     }
@@ -29,28 +29,7 @@ namespace sg
         {
             for (auto el : raw)
             {
-                switch (el)
-                {
-                case ElementType::Empty:
-                    os << ' ';
-                    break;
-
-                case ElementType::Fruit:
-                    os << 'F';
-                    break;
-
-                case ElementType::Snake:
-                    os << 'o';
-                    break;
-
-                case ElementType::Wall:
-                    os << '#';
-                    break;
-
-                default:
-                    throw std::runtime_error("Unknown element type");
-                    break;
-                }
+                os << el;
             }
             os << '\n';
         }

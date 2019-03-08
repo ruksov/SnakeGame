@@ -1,6 +1,7 @@
 #include "stdafx.h"
 #include "Snake.h"
 
+#include "MapElement.h"
 #include "Common/Exceptions.h"
 
 namespace sg
@@ -32,21 +33,33 @@ namespace sg
     {
         auto action = SnakeAction::Move;
         Point lookAtPoint = GetLookAtPoint();
-        ElementType lookAtElement = board.GetElement(lookAtPoint);
+        char lookAtElement = board.GetElement(lookAtPoint);
 
-        if (ElementType::Wall == lookAtElement 
-            || (ElementType::Snake == lookAtElement && lookAtPoint != m_body.back()))
+        if (MapElement_Wall == lookAtElement
+            || (MapElement_Snake == lookAtElement && lookAtPoint != m_body.back()))
         {
+            //
+            // Snake colides with wall or snake body.
+            // We skip coliding with snake tail, because in this 
+            // frame the tail changes it's position.
+            //
             action = SnakeAction::Break;
         }
-        else if (ElementType::Fruit == lookAtElement)
+        else if (MapElement_Fruit == lookAtElement)
         {
+            //
+            // The snake eats fruit, so we can to increase size of our snake.
+            // We just set snake node to fruit position.
+            //
             action = SnakeAction::EatFruit;
             m_body.push_front(lookAtPoint);
-            board.SetElement(ElementType::Snake, lookAtPoint);
+            board.SetElement(MapElement_Snake, lookAtPoint);
         }
         else
         {
+            //
+            // This is standard moving of snake.
+            //
             Point prevNodePos = lookAtPoint;
             for (auto& node : m_body)
             {
@@ -55,10 +68,13 @@ namespace sg
                 prevNodePos = oldPos;
             }
 
-            board.SetElement(ElementType::Empty, prevNodePos);
-            board.SetElement(ElementType::Snake, lookAtPoint);
+            board.SetElement(MapElement_Empty, prevNodePos);
+            board.SetElement(MapElement_Snake, lookAtPoint);
         }
 
+        //
+        // Send to some subscriber current snake action.
+        //
         m_onActionCb(action);
     }
 

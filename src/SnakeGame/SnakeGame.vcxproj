@@ -200,6 +200,7 @@
     <ClInclude Include="Levels\ILevelLoader.h" />
     <ClInclude Include="Levels\LevelLoader.h" />
     <ClInclude Include="Levels\MainMenuLevel.h" />
+    <ClInclude Include="Levels\SnakeLevel\MapElement.h" />
     <ClInclude Include="Levels\SnakeLevel\Snake.h" />
     <ClInclude Include="Levels\SnakeLevel\SnakeController.h" />
     <ClInclude Include="Levels\SnakeLevel\SnakeLevel.h" />
