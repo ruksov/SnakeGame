@@ -1,7 +1,8 @@
 #include "stdafx.h"
 #include "GameLauncher.h"
+
 #include "Game.h"
-#include "LevelLoader.h"
+#include "Levels/LevelLoader.h"
 
 namespace sg
 {

@@ -1,5 +1,5 @@
 #include "stdafx.h"
-#include "GameLauncher.h"
+#include "GameBase/GameLauncher.h"
 
 int main()
 {

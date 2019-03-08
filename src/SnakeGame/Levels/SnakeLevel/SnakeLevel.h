@@ -1,9 +1,9 @@
 #pragma once
-#include "ILevel.h"
-#include "Board.h"
-#include "GameState.h"
 #include "Snake.h"
 #include "SnakeController.h"
+#include "Common/Board.h"
+#include "Levels/ILevel.h"
+#include "GameBase/GameState.h"
 
 namespace sg
 {

@@ -1,6 +1,6 @@
 #pragma once
-#include "Input.h"
-#include "GameEvent.h"
+#include "Common/Input.h"
+#include "GameBase/GameEvent.h"
 
 namespace sg
 {

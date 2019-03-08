@@ -1,10 +1,11 @@
 #include "stdafx.h"
 #include "LevelLoader.h"
-#include "Exceptions.h"
+
+#include "Common/Exceptions.h"
 
 #include "MainMenuLevel.h"
 #include "DifficultyMenuLevel.h"
-#include "SnakeLevel.h"
+#include "SnakeLevel/SnakeLevel.h"
 #include "GameOverMenuLevel.h"
 
 namespace sg

@@ -1,6 +1,7 @@
 #include "stdafx.h"
 #include "GameOverMenuLevel.h"
-#include "Exceptions.h"
+
+#include "Common/Exceptions.h"
 
 namespace sg
 {

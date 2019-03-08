@@ -1,7 +1,8 @@
 #include "stdafx.h"
 #include "Game.h"
-#include "InputQueue.h"
-#include "Exceptions.h"
+
+#include "Common/InputQueue.h"
+#include "Common/Exceptions.h"
 
 using namespace std::chrono_literals;
 

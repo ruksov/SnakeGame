@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "Snake.h"
 
-#include "Exceptions.h"
+#include "Common/Exceptions.h"
 
 namespace sg
 {

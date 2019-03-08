@@ -1,7 +1,7 @@
 #pragma once
 #include "Snake.h"
-#include "Input.h"
-#include "GameState.h"
+#include "Common/Input.h"
+#include "GameBase/GameState.h"
 
 namespace sg
 {

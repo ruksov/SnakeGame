@@ -1,123 +1,119 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Source Files">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    <Filter Include="Levels\SnakeLevel">
+      <UniqueIdentifier>{93d6473e-ad64-44e5-a9f8-a5a8f3c4e5fb}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    <Filter Include="Levels">
+      <UniqueIdentifier>{50868d88-52d3-4aba-bf7d-96be09f8ee1a}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    <Filter Include="GameBase">
+      <UniqueIdentifier>{31f6aa79-9cf6-48f2-86a1-99bd28a98cda}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common">
+      <UniqueIdentifier>{b95a8315-7c16-479c-a46e-996f74b5e0bc}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="Levels\SnakeLevel\Snake.cpp">
+      <Filter>Levels\SnakeLevel</Filter>
     </ClCompile>
-    <ClCompile Include="InputQueue.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="Levels\SnakeLevel\SnakeController.cpp">
+      <Filter>Levels\SnakeLevel</Filter>
     </ClCompile>
-    <ClCompile Include="GameState.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="Levels\SnakeLevel\SnakeLevel.cpp">
+      <Filter>Levels\SnakeLevel</Filter>
     </ClCompile>
-    <ClCompile Include="LevelLoader.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="GameBase\Game.cpp">
+      <Filter>GameBase</Filter>
     </ClCompile>
-    <ClCompile Include="Game.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="GameBase\GameLauncher.cpp">
+      <Filter>GameBase</Filter>
     </ClCompile>
-    <ClCompile Include="GameLauncher.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="GameBase\GameState.cpp">
+      <Filter>GameBase</Filter>
     </ClCompile>
-    <ClCompile Include="ItemList.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="Common\Board.cpp">
+      <Filter>Common</Filter>
     </ClCompile>
-    <ClCompile Include="MainMenuLevel.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="Common\InputQueue.cpp">
+      <Filter>Common</Filter>
     </ClCompile>
-    <ClCompile Include="Board.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="Common\ItemList.cpp">
+      <Filter>Common</Filter>
     </ClCompile>
-    <ClCompile Include="Snake.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="Levels\DifficultyMenuLevel.cpp">
+      <Filter>Levels</Filter>
     </ClCompile>
-    <ClCompile Include="SnakeController.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="Levels\GameOverMenuLevel.cpp">
+      <Filter>Levels</Filter>
     </ClCompile>
-    <ClCompile Include="SnakeLevel.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="Levels\LevelLoader.cpp">
+      <Filter>Levels</Filter>
     </ClCompile>
-    <ClCompile Include="DifficultyMenuLevel.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="Levels\MainMenuLevel.cpp">
+      <Filter>Levels</Filter>
     </ClCompile>
-    <ClCompile Include="GameOverMenuLevel.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
+    <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="stdafx.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="Levels\SnakeLevel\Snake.h">
+      <Filter>Levels\SnakeLevel</Filter>
     </ClInclude>
-    <ClInclude Include="Exceptions.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="Levels\SnakeLevel\SnakeController.h">
+      <Filter>Levels\SnakeLevel</Filter>
     </ClInclude>
-    <ClInclude Include="Input.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="Levels\SnakeLevel\SnakeLevel.h">
+      <Filter>Levels\SnakeLevel</Filter>
     </ClInclude>
-    <ClInclude Include="InputQueue.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="GameBase\Game.h">
+      <Filter>GameBase</Filter>
     </ClInclude>
-    <ClInclude Include="GameState.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="GameBase\GameEvent.h">
+      <Filter>GameBase</Filter>
     </ClInclude>
-    <ClInclude Include="ILevel.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="GameBase\GameLauncher.h">
+      <Filter>GameBase</Filter>
     </ClInclude>
-    <ClInclude Include="ILevelLoader.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="GameBase\GameState.h">
+      <Filter>GameBase</Filter>
     </ClInclude>
-    <ClInclude Include="LevelLoader.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="Common\Board.h">
+      <Filter>Common</Filter>
     </ClInclude>
-    <ClInclude Include="Game.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="Common\Exceptions.h">
+      <Filter>Common</Filter>
     </ClInclude>
-    <ClInclude Include="GameEvent.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="Common\Input.h">
+      <Filter>Common</Filter>
     </ClInclude>
-    <ClInclude Include="GameLauncher.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="Common\InputQueue.h">
+      <Filter>Common</Filter>
     </ClInclude>
-    <ClInclude Include="ItemList.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="Common\ItemList.h">
+      <Filter>Common</Filter>
     </ClInclude>
-    <ClInclude Include="MainMenuLevel.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="Common\Point.h">
+      <Filter>Common</Filter>
     </ClInclude>
-    <ClInclude Include="Board.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="Levels\DifficultyMenuLevel.h">
+      <Filter>Levels</Filter>
     </ClInclude>
-    <ClInclude Include="Point.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="Levels\GameOverMenuLevel.h">
+      <Filter>Levels</Filter>
     </ClInclude>
-    <ClInclude Include="Snake.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="Levels\ILevel.h">
+      <Filter>Levels</Filter>
     </ClInclude>
-    <ClInclude Include="SnakeController.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="Levels\ILevelLoader.h">
+      <Filter>Levels</Filter>
     </ClInclude>
-    <ClInclude Include="SnakeLevel.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="Levels\LevelLoader.h">
+      <Filter>Levels</Filter>
     </ClInclude>
-    <ClInclude Include="DifficultyMenuLevel.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="Levels\MainMenuLevel.h">
+      <Filter>Levels</Filter>
     </ClInclude>
-    <ClInclude Include="GameOverMenuLevel.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
+    <ClInclude Include="stdafx.h" />
   </ItemGroup>
 </Project>

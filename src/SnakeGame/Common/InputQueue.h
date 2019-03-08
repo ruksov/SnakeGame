@@ -4,10 +4,10 @@
 namespace sg
 {
     //
-    // This class collects user input to a queue.
+    // This class reads user input and save it to queue.
     //
-    // To get user input just use Pop() method. If there were not
-    // any user input Pop() method returns Input::Undefined value.
+    // To get user input just use Pop() method. If there are not
+    // any user input Pop() method will return Input::Undefined value.
     //
     class InputQueue
     {

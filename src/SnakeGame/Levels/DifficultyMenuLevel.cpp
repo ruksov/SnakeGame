@@ -1,6 +1,7 @@
 #include "stdafx.h"
 #include "DifficultyMenuLevel.h"
-#include "Exceptions.h"
+
+#include "Common/Exceptions.h"
 
 namespace sg
 {

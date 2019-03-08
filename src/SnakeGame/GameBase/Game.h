@@ -1,7 +1,7 @@
 #pragma once
-#include "ILevelLoader.h"
 #include "GameState.h"
 #include "GameEvent.h"
+#include "Levels/ILevelLoader.h"
 
 namespace sg
 {

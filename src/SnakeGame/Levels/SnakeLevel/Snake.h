@@ -1,5 +1,5 @@
 #pragma once
-#include "Board.h"
+#include "Common/Board.h"
 
 namespace sg
 {

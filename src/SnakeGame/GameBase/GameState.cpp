@@ -1,6 +1,7 @@
 #include "stdafx.h"
 #include "GameState.h"
-#include "Exceptions.h"
+
+#include "Common/Exceptions.h"
 
 namespace sg
 {

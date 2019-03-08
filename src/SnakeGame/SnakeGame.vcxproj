@@ -106,6 +106,7 @@
       <EnablePREfast>true</EnablePREfast>
       <LanguageStandard>stdcpplatest</LanguageStandard>
       <PrecompiledHeader>Create</PrecompiledHeader>
+      <AdditionalIncludeDirectories>$(SolutionDir)SnakeGame;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -120,6 +121,7 @@
       <EnablePREfast>true</EnablePREfast>
       <LanguageStandard>stdcpplatest</LanguageStandard>
       <PrecompiledHeader>Create</PrecompiledHeader>
+      <AdditionalIncludeDirectories>$(SolutionDir)SnakeGame;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -137,6 +139,7 @@
       <TreatWarningAsError>true</TreatWarningAsError>
       <LanguageStandard>stdcpplatest</LanguageStandard>
       <PrecompiledHeader>Create</PrecompiledHeader>
+      <AdditionalIncludeDirectories>$(SolutionDir)SnakeGame;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
@@ -156,6 +159,7 @@
       <TreatWarningAsError>true</TreatWarningAsError>
       <LanguageStandard>stdcpplatest</LanguageStandard>
       <PrecompiledHeader>Create</PrecompiledHeader>
+      <AdditionalIncludeDirectories>$(SolutionDir)SnakeGame;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
@@ -164,41 +168,41 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Board.cpp" />
-    <ClCompile Include="DifficultyMenuLevel.cpp" />
-    <ClCompile Include="Game.cpp" />
-    <ClCompile Include="GameLauncher.cpp" />
-    <ClCompile Include="GameOverMenuLevel.cpp" />
-    <ClCompile Include="GameState.cpp" />
-    <ClCompile Include="InputQueue.cpp" />
-    <ClCompile Include="ItemList.cpp" />
-    <ClCompile Include="LevelLoader.cpp" />
+    <ClCompile Include="Common\Board.cpp" />
+    <ClCompile Include="Common\InputQueue.cpp" />
+    <ClCompile Include="Common\ItemList.cpp" />
+    <ClCompile Include="GameBase\Game.cpp" />
+    <ClCompile Include="GameBase\GameLauncher.cpp" />
+    <ClCompile Include="GameBase\GameState.cpp" />
+    <ClCompile Include="Levels\DifficultyMenuLevel.cpp" />
+    <ClCompile Include="Levels\GameOverMenuLevel.cpp" />
+    <ClCompile Include="Levels\LevelLoader.cpp" />
+    <ClCompile Include="Levels\MainMenuLevel.cpp" />
+    <ClCompile Include="Levels\SnakeLevel\Snake.cpp" />
+    <ClCompile Include="Levels\SnakeLevel\SnakeController.cpp" />
+    <ClCompile Include="Levels\SnakeLevel\SnakeLevel.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="MainMenuLevel.cpp" />
-    <ClCompile Include="Snake.cpp" />
-    <ClCompile Include="SnakeController.cpp" />
-    <ClCompile Include="SnakeLevel.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Board.h" />
-    <ClInclude Include="DifficultyMenuLevel.h" />
-    <ClInclude Include="Exceptions.h" />
-    <ClInclude Include="Game.h" />
-    <ClInclude Include="GameEvent.h" />
-    <ClInclude Include="GameLauncher.h" />
-    <ClInclude Include="GameOverMenuLevel.h" />
-    <ClInclude Include="GameState.h" />
-    <ClInclude Include="ILevel.h" />
-    <ClInclude Include="ILevelLoader.h" />
-    <ClInclude Include="Input.h" />
-    <ClInclude Include="InputQueue.h" />
-    <ClInclude Include="ItemList.h" />
-    <ClInclude Include="LevelLoader.h" />
-    <ClInclude Include="MainMenuLevel.h" />
-    <ClInclude Include="Point.h" />
-    <ClInclude Include="Snake.h" />
-    <ClInclude Include="SnakeController.h" />
-    <ClInclude Include="SnakeLevel.h" />
+    <ClInclude Include="Common\Board.h" />
+    <ClInclude Include="Common\Exceptions.h" />
+    <ClInclude Include="Common\Input.h" />
+    <ClInclude Include="Common\InputQueue.h" />
+    <ClInclude Include="Common\ItemList.h" />
+    <ClInclude Include="Common\Point.h" />
+    <ClInclude Include="GameBase\Game.h" />
+    <ClInclude Include="GameBase\GameEvent.h" />
+    <ClInclude Include="GameBase\GameLauncher.h" />
+    <ClInclude Include="GameBase\GameState.h" />
+    <ClInclude Include="Levels\DifficultyMenuLevel.h" />
+    <ClInclude Include="Levels\GameOverMenuLevel.h" />
+    <ClInclude Include="Levels\ILevel.h" />
+    <ClInclude Include="Levels\ILevelLoader.h" />
+    <ClInclude Include="Levels\LevelLoader.h" />
+    <ClInclude Include="Levels\MainMenuLevel.h" />
+    <ClInclude Include="Levels\SnakeLevel\Snake.h" />
+    <ClInclude Include="Levels\SnakeLevel\SnakeController.h" />
+    <ClInclude Include="Levels\SnakeLevel\SnakeLevel.h" />
     <ClInclude Include="stdafx.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

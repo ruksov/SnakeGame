@@ -9,7 +9,7 @@ namespace sg
     //    # item2
     //      item3
     //
-    // The ItemList handle Up and Down inputs to switch
+    // The ItemList handles Up and Down inputs to switching
     // between it's items.
     //
     class ItemList

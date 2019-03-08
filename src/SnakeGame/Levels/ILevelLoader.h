@@ -1,6 +1,6 @@
 #pragma once
 #include "ILevel.h"
-#include "GameState.h"
+#include "GameBase/GameState.h"
 
 namespace sg
 {

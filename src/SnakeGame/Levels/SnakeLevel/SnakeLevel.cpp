@@ -5,7 +5,7 @@ namespace sg
 {
     SnakeLevel::SnakeLevel(GameState & gameState)
         : m_gameState(gameState)
-        , m_board(22, 22)
+        , m_board(22, 22)   // board width and height + 2 raws and collumns for walls
         , m_snakeCtrl(m_board, m_gameState.GetFps(), m_gameState.GetDifficulty())
     {
         switch (gameState.GetDifficulty())

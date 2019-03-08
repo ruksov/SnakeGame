@@ -4,7 +4,7 @@
 namespace sg
 {
     //
-    // Types of difficulty on game level.
+    // Types of difficulty in snake game level.
     //
     enum class Difficulty
     {
